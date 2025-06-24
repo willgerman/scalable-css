@@ -1,0 +1,122 @@
+@use "../abstracts/tokens" as *;
+
+// -------------------------------------------------- //
+
+:where(body) {}
+
+:where(main) {}
+
+// -------------------------------------------------- //
+
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6) {}
+
+:where(h1:not([class]),
+    h2:not([class]),
+    h3:not([class]),
+    h4:not([class]),
+    h5:not([class]),
+    h6:not([class])) {}
+
+:where(h1) {}
+
+:where(h1:not([class])) {}
+
+:where(h2) {}
+
+:where(h2:not([class])) {}
+
+:where(h3) {}
+
+:where(h3:not([class])) {}
+
+:where(h4) {}
+
+:where(h4:not([class])) {}
+
+:where(h5) {}
+
+:where(h5:not([class])) {}
+
+:where(h6) {}
+
+:where(h6:not([class])) {}
+
+// -------------------------------------------------- //
+
+:where(p) {}
+
+:where(p:not([class])) {}
+
+// -------------------------------------------------- //
+
+:where(a) {}
+
+:where(a:not([class])) {}
+
+// -------------------------------------------------- //
+
+:where(button) {}
+
+:where(button:not([class])) {}
+
+:where(button[type="button"]:not([class])) {}
+
+:where(button[type="submit"]:not([class])) {}
+
+:where(button[type="reset"]:not([class])) {}
+
+:where(button[data-type="icon"]:not([class])) {}
+
+
+// -------------------------------------------------- //
+
+:where(label) {}
+
+:where(label:not[class]) {}
+
+// -------------------------------------------------- //
+
+:where(input) {}
+
+:where(input[type="text"]:not([class])) {}
+
+:where(input[type="email"]:not([class])) {}
+
+:where(input[type="password"]:not([class])) {}
+
+// -------------------------------------------------- //
+
+:where(textarea, textarea:not([rows])) {}
+
+:where(textarea:not([class]), textarea:not([rows], [class])) {}
+
+// -------------------------------------------------- //
+
+:where(form) {}
+
+:where(form:not([class])) {}
+
+// -------------------------------------------------- //
+
+:where(.form_field) {}
+
+// -------------------------------------------------- //
+
+:where(.heading) {}
+
+:where(.subheading) {}
+
+:where(.paragraph) {}
+
+:where(.small) {}
+
+// -------------------------------------------------- //
+
+// WYSIWYG Styling Here
+
+// -------------------------------------------------- //

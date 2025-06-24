@@ -1,0 +1,41 @@
+@use "sass:map";
+
+// ========================================= //
+
+$grid-map: (
+    "place-content": ("content-start": start,
+        "content-center": center,
+        "content-end": end,
+    ),
+    "place-items": ("items-start": start,
+        "items-center": center,
+        "items-end": end,
+    ),
+);
+
+// ========================================= //
+
+$flex-map: (
+    "flex-direction": ("--col": column,
+        "row": row,
+        "col-reverse": column-reverse,
+        "row-reverse": row-reverse,
+    ),
+    "align-items": ("align-start": start,
+        "align-center": center,
+        "align-end": end,
+    ),
+    "justify-content": ("justify-start": start,
+        "justify-center": center,
+        "justify-end": end,
+    ),
+);
+
+// ========================================= //
+
+$flow-map: (
+    "margin-top": ("vertical": "var(--_gap)"),
+    "margin-left": ("horizontal": "var(--_gap)"),
+);
+
+// ========================================= //

@@ -1,0 +1,269 @@
+@use "sass:map";
+
+// ========================================= //
+
+$_burgundy-400: hsl(344, 100%, 25%);
+$_burgundy-900: hsl(345, 100%, 16%);
+
+$_blue-050: hsl(205, 79%, 92%);
+$_blue-100: hsl(205, 97%, 85%);
+$_blue-200: hsl(205, 84%, 74%);
+$_blue-300: hsl(205, 74%, 65%);
+$_blue-400: hsl(205, 65%, 55%);
+$_blue-500: hsl(205, 67%, 45%);
+$_blue-600: hsl(205, 76%, 39%);
+$_blue-700: hsl(205, 82%, 33%);
+$_blue-800: hsl(205, 87%, 29%);
+$_blue-900: hsl(205, 100%, 21%);
+
+$_grey-000: hsl(0, 0%, 100%);
+$_grey-050: hsl(0, 0%, 97%);
+$_grey-100: hsl(0, 0%, 88%);
+$_grey-200: hsl(0, 0%, 81%);
+$_grey-300: hsl(0, 0%, 69%);
+$_grey-400: hsl(0, 0%, 62%);
+$_grey-500: hsl(0, 0%, 49%);
+$_grey-600: hsl(0, 0%, 38%);
+$_grey-700: hsl(0, 0%, 32%);
+$_grey-800: hsl(0, 0%, 23%);
+$_grey-900: hsl(0, 0%, 13%);
+$_grey-950: hsl(0, 0%, 0%);
+
+$_teal-050: hsl(152, 68%, 96%);
+$_teal-100: hsl(154, 75%, 87%);
+$_teal-200: hsl(156, 73%, 74%);
+$_teal-300: hsl(158, 58%, 62%);
+$_teal-400: hsl(160, 51%, 49%);
+$_teal-500: hsl(162, 63%, 41%);
+$_teal-600: hsl(164, 71%, 34%);
+$_teal-700: hsl(166, 72%, 28%);
+$_teal-800: hsl(168, 80%, 23%);
+$_teal-900: hsl(170, 97%, 15%);
+
+$_yellow-050: hsl(45, 100%, 96%);
+$_yellow-100: hsl(45, 90%, 88%);
+$_yellow-200: hsl(45, 86%, 81%);
+$_yellow-300: hsl(43, 90%, 76%);
+$_yellow-400: hsl(43, 89%, 70%);
+$_yellow-500: hsl(42, 78%, 60%);
+$_yellow-600: hsl(42, 63%, 48%);
+$_yellow-700: hsl(43, 72%, 37%);
+$_yellow-800: hsl(43, 77%, 27%);
+$_yellow-900: hsl(43, 86%, 17%);
+
+$_red-050: hsl(360, 100%, 97%);
+$_red-100: hsl(360, 82%, 89%);
+$_red-200: hsl(360, 77%, 78%);
+$_red-300: hsl(360, 71%, 66%);
+$_red-400: hsl(360, 64%, 55%);
+$_red-500: hsl(360, 67%, 44%);
+$_red-600: hsl(360, 72%, 38%);
+$_red-700: hsl(360, 79%, 32%);
+$_red-800: hsl(360, 85%, 25%);
+$_red-900: hsl(360, 92%, 20%);
+
+// ========================================= //
+
+$light-theme-map: (
+    "primary": ("400": $_burgundy-400,
+        "900": $_burgundy-900,
+    ),
+    "neutral": ("000": $_grey-000,
+        "050": $_grey-050,
+        "100": $_grey-100,
+        "200": $_grey-200,
+        "300": $_grey-300,
+        "400": $_grey-400,
+        "500": $_grey-500,
+        "600": $_grey-600,
+        "700": $_grey-700,
+        "800": $_grey-800,
+        "900": $_grey-900,
+        "950": $_grey-950,
+    ),
+    "accent": ("050": $_blue-050,
+        "100": $_blue-100,
+        "200": $_blue-200,
+        "300": $_blue-300,
+        "400": $_blue-400,
+        "500": $_blue-500,
+        "600": $_blue-600,
+        "700": $_blue-700,
+        "800": $_blue-800,
+        "900": $_blue-900,
+    ),
+    "semantic-success": ("050": $_teal-050,
+        "100": $_teal-100,
+        "200": $_teal-200,
+        "300": $_teal-300,
+        "400": $_teal-400,
+        "500": $_teal-500,
+        "600": $_teal-600,
+        "700": $_teal-700,
+        "800": $_teal-800,
+        "900": $_teal-900,
+    ),
+    "semantic-warning": ("050": $_yellow-050,
+        "100": $_yellow-100,
+        "200": $_yellow-200,
+        "300": $_yellow-300,
+        "400": $_yellow-400,
+        "500": $_yellow-500,
+        "600": $_yellow-600,
+        "700": $_yellow-700,
+        "800": $_yellow-800,
+        "900": $_yellow-900,
+    ),
+    "semantic-error": ("050": $_red-050,
+        "100": $_red-100,
+        "200": $_red-200,
+        "300": $_red-300,
+        "400": $_red-400,
+        "500": $_red-500,
+        "600": $_red-600,
+        "700": $_red-700,
+        "800": $_red-800,
+        "900": $_red-900,
+    ),
+);
+
+$dark-theme-map: (
+    "primary": ("400": $_burgundy-400,
+        "900": $_burgundy-900,
+    ),
+    "neutral": ("000": $_grey-950,
+        "050": $_grey-900,
+        "100": $_grey-800,
+        "200": $_grey-700,
+        "300": $_grey-600,
+        "400": $_grey-500,
+        "500": $_grey-400,
+        "600": $_grey-300,
+        "700": $_grey-200,
+        "800": $_grey-100,
+        "900": $_grey-050,
+        "950": $_grey-000,
+    ),
+    "accent": ("050": $_blue-900,
+        "100": $_blue-800,
+        "200": $_blue-700,
+        "300": $_blue-600,
+        "400": $_blue-500,
+        "500": $_blue-400,
+        "600": $_blue-300,
+        "700": $_blue-200,
+        "800": $_blue-100,
+        "900": $_blue-050,
+    ),
+    "semantic-success": ("050": $_teal-900,
+        "100": $_teal-800,
+        "200": $_teal-700,
+        "300": $_teal-600,
+        "400": $_teal-500,
+        "500": $_teal-400,
+        "600": $_teal-300,
+        "700": $_teal-200,
+        "800": $_teal-100,
+        "900": $_teal-050,
+    ),
+    "semantic-warning": ("050": $_yellow-900,
+        "100": $_yellow-800,
+        "200": $_yellow-700,
+        "300": $_yellow-600,
+        "400": $_yellow-500,
+        "500": $_yellow-400,
+        "600": $_yellow-300,
+        "700": $_yellow-200,
+        "800": $_yellow-100,
+        "900": $_yellow-050,
+    ),
+    "semantic-error": ("050": $_red-900,
+        "100": $_red-800,
+        "200": $_red-700,
+        "300": $_red-600,
+        "400": $_red-500,
+        "500": $_red-400,
+        "600": $_red-300,
+        "700": $_red-200,
+        "800": $_red-100,
+        "900": $_red-050,
+    ),
+);
+
+// ========================================= //
+
+$light: $light-theme-map;
+$dark: $dark-theme-map;
+
+// ========================================= //
+
+$property-map: (
+    "bg": "background",
+    "text": "color",
+    "fill": "fill",
+);
+
+// ========================================= //
+
+$primary-400: var(--primary-400);
+$primary-900: var(--primary-900);
+
+$neutral-050: var(--neutral-050);
+$neutral-100: var(--neutral-100);
+$neutral-200: var(--neutral-200);
+$neutral-300: var(--neutral-300);
+$neutral-400: var(--neutral-400);
+$neutral-500: var(--neutral-500);
+$neutral-600: var(--neutral-600);
+$neutral-700: var(--neutral-700);
+$neutral-800: var(--neutral-800);
+$neutral-900: var(--neutral-900);
+$neutral-950: var(--neutral-950);
+
+$accent-000: var(--accent-000);
+$accent-050: var(--accent-050);
+$accent-100: var(--accent-100);
+$accent-200: var(--accent-200);
+$accent-300: var(--accent-300);
+$accent-400: var(--accent-400);
+$accent-500: var(--accent-500);
+$accent-600: var(--accent-600);
+$accent-700: var(--accent-700);
+$accent-800: var(--accent-800);
+$accent-900: var(--accent-900);
+$accent-950: var(--accent-950);
+
+$semantic-success-050: var(--semantic-success-050);
+$semantic-success-100: var(--semantic-success-100);
+$semantic-success-200: var(--semantic-success-200);
+$semantic-success-300: var(--semantic-success-300);
+$semantic-success-400: var(--semantic-success-400);
+$semantic-success-500: var(--semantic-success-500);
+$semantic-success-600: var(--semantic-success-600);
+$semantic-success-700: var(--semantic-success-700);
+$semantic-success-800: var(--semantic-success-800);
+$semantic-success-900: var(--semantic-success-900);
+
+$semantic-warning-050: var(--semantic-warning-050);
+$semantic-warning-100: var(--semantic-warning-100);
+$semantic-warning-200: var(--semantic-warning-200);
+$semantic-warning-300: var(--semantic-warning-300);
+$semantic-warning-400: var(--semantic-warning-400);
+$semantic-warning-500: var(--semantic-warning-500);
+$semantic-warning-600: var(--semantic-warning-600);
+$semantic-warning-700: var(--semantic-warning-700);
+$semantic-warning-800: var(--semantic-warning-800);
+$semantic-warning-900: var(--semantic-warning-900);
+
+$semantic-error-050: var(--semantic-error-050);
+$semantic-error-100: var(--semantic-error-100);
+$semantic-error-200: var(--semantic-error-200);
+$semantic-error-300: var(--semantic-error-300);
+$semantic-error-400: var(--semantic-error-400);
+$semantic-error-500: var(--semantic-error-500);
+$semantic-error-600: var(--semantic-error-600);
+$semantic-error-700: var(--semantic-error-700);
+$semantic-error-800: var(--semantic-error-800);
+$semantic-error-900: var(--semantic-error-900);
+
+// ========================================= //

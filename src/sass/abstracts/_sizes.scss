@@ -1,0 +1,32 @@
+@use "sass:map";
+
+// ========================================= //
+
+$size-map: (
+    "auto": auto,
+    "none": none,
+    0: 0em,
+    4: 0.25em,
+    8: 0.5em,
+    12: 0.75em,
+    16: 1.0em,
+    20: 1.25em,
+    24: 1.5em,
+    28: 1.75em,
+    32: 2.0em,
+    36: 2.25em,
+    40: 2.5em,
+    44: 2.75em,
+    48: 3.0em,
+    52: 3.25em,
+    56: 3.5em,
+    60: 3.75em,
+    64: 4.0em,
+);
+
+// ========================================= //
+
+$property-list: "margin", "padding";
+$modifier-list: "block", "block-start", "block-end", "inline", "inline-start", "inline-end", "top", "left", "right", "bottom";
+
+// ========================================= //

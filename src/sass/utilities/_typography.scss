@@ -1,0 +1,69 @@
+@use "../abstracts/typography" as *;
+
+// ========================================= //
+
+@each $family, $value in $font-family-map {
+    .ff-#{$family} {
+        font-family: #{$value};
+    }
+}
+
+// ========================================= //
+
+@each $size, $value in $font-size-map {
+    .fs-#{$size} {
+        font-size: #{$value};
+    }
+}
+
+// ========================================= //
+
+@each $weight, $value in $font-weight-map {
+    .fw-#{$weight} {
+        font-weight: #{$value};
+    }
+}
+
+// ========================================= //
+
+@each $height, $value in $line-height-map {
+    .lh-#{$height} {
+        line-height: #{$value};
+    }
+}
+
+// ========================================= //
+
+@each $spacing, $value in $letter-spacing-map {
+    .ls-#{$spacing} {
+        letter-spacing: #{$value};
+    }
+}
+
+// ========================================= //
+
+@each $style in $font-style-list {
+    .fs-#{$style} {
+        font-style: #{$style};
+    }
+}
+
+@each $transform in $text-transform-list {
+    .tt-#{$transform} {
+        text-transform: #{$transform};
+    }
+}
+
+@each $align in $text-align-list {
+    .ta-#{$align} {
+        text-align: #{$align};
+    }
+}
+
+@each $wrap in $text-wrap-list {
+    .tw-#{$wrap} {
+        text-wrap: #{$wrap};
+    }
+}
+
+// ========================================= //

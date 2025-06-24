@@ -1,0 +1,20 @@
+@use "../abstracts/sizes" as *;
+
+// ========================================= //
+
+@each $size, $value in $size-map {
+    @each $property in $property-list {
+
+        .#{$property}-#{$size} {
+            #{$property}: #{$value};
+        }
+
+        @each $modifier in $modifier-list {
+            .#{$property}-#{$modifier}-#{$size} {
+                #{$property}-#{$modifier}: #{$value};
+            }
+        }
+    }
+}
+
+// ========================================= //

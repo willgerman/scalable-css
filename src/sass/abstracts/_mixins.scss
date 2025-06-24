@@ -1,0 +1,87 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "breakpoints" as *;
+
+// ========================================= //
+
+@mixin min-width($size) {
+    @if map.has-key($breakpoints, $size) {
+        $breakpoint: map-get($breakpoints, $size);
+
+        @media screen and (min-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    @else if meta.type-of($size)==number {
+        @if math.is-unitless($size) {
+            @error "This mixin does not support unitless numbers.";
+        }
+
+        @else {
+            @media screen and (min-width: $size) {
+                @content;
+            }
+        }
+    }
+
+    @else {
+        @error "$breakpoints map does not contain the #{$size} keyword.";
+    }
+}
+
+// ========================================= //
+
+@mixin max-width($size) {
+    @if map.has-key($breakpoints, $size) {
+        $breakpoint: map-get($breakpoints, $size);
+
+        @media screen and (max-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    @else if meta.type-of($size)==number {
+        @if math.is-unitless($size) {
+            @error "This mixin does not support unitless numbers.";
+        }
+
+        @else {
+            @media screen and (max-width: $size) {
+                @content;
+            }
+        }
+    }
+
+    @else {
+        @error "$breakpoints map does not contain the #{$size} keyword.";
+    }
+}
+
+// ========================================= //
+
+@mixin pseudo($type: 'before',
+    $position: absolute,
+    $content: '') {
+
+    @if $type =='before' {
+        &::before {
+            content: $content;
+            position: $position;
+
+            @content;
+        }
+    }
+
+    @else {
+        &::after {
+            content: $content;
+            position: $position;
+
+            @content;
+        }
+    }
+}
+
+// ========================================= //

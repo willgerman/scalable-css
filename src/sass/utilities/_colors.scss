@@ -1,0 +1,18 @@
+@use "../abstracts/colors" as *;
+
+// ========================================= //
+
+// TODO: Implement themes and theme switching.
+
+@each $color, $shade-map in $light-theme-map {
+    @each $shade, $value in $shade-map {
+        @each $name, $property in $property-map {
+            .#{$name}-#{$color}-#{$shade} {
+                #{$property}: var(--#{$color}-#{$shade});
+            }
+        }
+    }
+}
+
+
+// ========================================= //

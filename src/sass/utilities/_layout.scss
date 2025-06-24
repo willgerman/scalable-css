@@ -1,0 +1,58 @@
+@use "../abstracts/" as *;
+
+// TODO: Replace "1em" with the "default/fallback" size (gap) token.
+
+// ========================================= //
+
+:where([class*="grid"]) {
+    --_gap: var(--gap, 1em);
+
+    display: grid;
+    gap: var(--_gap);
+}
+
+@each $property, $modifier-map in $grid-map {
+    @each $modifier, $value in $modifier-map {
+        :where([class*="grid"][class$="--#{$modifier}"]) {
+            #{$property}: #{$value};
+        }
+    }
+}
+
+// ========================================= //
+
+:where([class*="flex"]) {
+    --_gap: var(--gap, 1em);
+
+    display: flex;
+    column-gap: var(--_gap);
+    row-gap: calc(var(--_gap) / 2);
+}
+
+@each $property, $modifier-map in $flex-map {
+    @each $modifier, $value in $modifier-map {
+        :where([class*="flex"][class$="--#{$modifier}"]) {
+            #{$property}: #{$value};
+        }
+    }
+}
+
+// ========================================= //
+
+:where([class*="flow"]) {
+    --_gap: var(--gap, 1em);
+}
+
+:where([class*="flow"] > *:where(:not(:first-child))) {
+    --_gap: var(--gap, 1em);
+}
+
+@each $property, $modifier-map in $flow-map {
+    @each $modifier, $value in $modifier-map {
+        :where([class*="flow"][class$="--#{$modifier}"] > *:where(:not(:first-child))) {
+            #{$property}: #{$value};
+        }
+    }
+}
+
+// ========================================= //
