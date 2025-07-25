@@ -10,12 +10,10 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "dependencies": {},
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
     "sass": "^1.89.2",
     "vite": "^7.0.0"
-  },
-  "dependencies": {
-    "alpinejs": "^3.14.9",
-    "htmx.org": "^2.0.5"
   }
 }
